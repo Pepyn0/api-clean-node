@@ -7,6 +7,10 @@ export default {
 
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' }),
 
-  preset: 'ts-jest'
+  preset: '@shelf/jest-mongodb',
+
+  transform: {
+    '.+\\.ts$': 'ts-jest'
+  }
 
 }
